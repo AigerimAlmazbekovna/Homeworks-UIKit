@@ -13,6 +13,11 @@
 		39133A642BB4050000B4D31D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39133A622BB4050000B4D31D /* Main.storyboard */; };
 		39133A662BB4050200B4D31D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39133A652BB4050200B4D31D /* Assets.xcassets */; };
 		39133A692BB4050200B4D31D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39133A672BB4050200B4D31D /* LaunchScreen.storyboard */; };
+		39133A712BB4058400B4D31D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133A702BB4058400B4D31D /* FeedViewController.swift */; };
+		39133A732BB405A700B4D31D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133A722BB405A700B4D31D /* ProfileViewController.swift */; };
+		39133A752BB405C300B4D31D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133A742BB405C300B4D31D /* InfoViewController.swift */; };
+		39133A782BB4067B00B4D31D /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133A772BB4067B00B4D31D /* PostViewController.swift */; };
+		39133A7A2BB406BE00B4D31D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133A792BB406BE00B4D31D /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		39133A652BB4050200B4D31D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39133A682BB4050200B4D31D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39133A6A2BB4050200B4D31D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39133A702BB4058400B4D31D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		39133A722BB405A700B4D31D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		39133A742BB405C300B4D31D /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		39133A772BB4067B00B4D31D /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		39133A792BB406BE00B4D31D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 		39133A5B2BB4050000B4D31D /* Navigation5 */ = {
 			isa = PBXGroup;
 			children = (
+				39133A762BB4065B00B4D31D /* Profile */,
 				39133A5C2BB4050000B4D31D /* AppDelegate.swift */,
 				39133A5E2BB4050000B4D31D /* SceneDelegate.swift */,
 				39133A602BB4050000B4D31D /* ViewController.swift */,
@@ -63,8 +74,20 @@
 				39133A652BB4050200B4D31D /* Assets.xcassets */,
 				39133A672BB4050200B4D31D /* LaunchScreen.storyboard */,
 				39133A6A2BB4050200B4D31D /* Info.plist */,
+				39133A702BB4058400B4D31D /* FeedViewController.swift */,
+				39133A722BB405A700B4D31D /* ProfileViewController.swift */,
+				39133A742BB405C300B4D31D /* InfoViewController.swift */,
+				39133A772BB4067B00B4D31D /* PostViewController.swift */,
+				39133A792BB406BE00B4D31D /* Post.swift */,
 			);
 			path = Navigation5;
+			sourceTree = "<group>";
+		};
+		39133A762BB4065B00B4D31D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +163,11 @@
 			files = (
 				39133A612BB4050000B4D31D /* ViewController.swift in Sources */,
 				39133A5D2BB4050000B4D31D /* AppDelegate.swift in Sources */,
+				39133A782BB4067B00B4D31D /* PostViewController.swift in Sources */,
+				39133A7A2BB406BE00B4D31D /* Post.swift in Sources */,
+				39133A732BB405A700B4D31D /* ProfileViewController.swift in Sources */,
+				39133A712BB4058400B4D31D /* FeedViewController.swift in Sources */,
+				39133A752BB405C300B4D31D /* InfoViewController.swift in Sources */,
 				39133A5F2BB4050000B4D31D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
