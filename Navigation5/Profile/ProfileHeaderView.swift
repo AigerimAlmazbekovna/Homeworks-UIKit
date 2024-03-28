@@ -43,7 +43,7 @@ class ProfileHeaderView: UIView {
         textField.layer.borderColor = UIColor.gray.cgColor
         textField.text = textInputContextIdentifier
         textField.placeholder = "Введите статус"
-        textField.backgroundColor = .gray
+        textField.backgroundColor = .white
         textField.textColor = .gray
         
         return textField
@@ -70,6 +70,7 @@ class ProfileHeaderView: UIView {
         labelTwo.numberOfLines = 1
         labelTwo.text = "StatusLabel"
         labelTwo.textColor = .black
+        labelTwo.backgroundColor = .gray
         labelTwo.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         labelTwo.translatesAutoresizingMaskIntoConstraints = false
         return labelTwo
