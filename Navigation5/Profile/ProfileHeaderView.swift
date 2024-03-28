@@ -43,7 +43,7 @@ class ProfileHeaderView: UIView {
         textField.layer.borderColor = UIColor.gray.cgColor
         textField.text = textInputContextIdentifier
         textField.placeholder = "Введите статус"
-        textField.backgroundColor = .white
+        textField.backgroundColor = .gray
         textField.textColor = .gray
         
         return textField
