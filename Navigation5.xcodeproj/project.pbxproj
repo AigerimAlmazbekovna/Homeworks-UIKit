@@ -18,6 +18,9 @@
 		39133A782BB4067B00B4D31D /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133A772BB4067B00B4D31D /* PostViewController.swift */; };
 		39133A7A2BB406BE00B4D31D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133A792BB406BE00B4D31D /* Post.swift */; };
 		39133A7C2BB408AF00B4D31D /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133A7B2BB408AF00B4D31D /* ProfileHeaderView.swift */; };
+		39133AE02BB93DBD00B4D31D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133ADF2BB93DBD00B4D31D /* LoginViewController.swift */; };
+		39133AE22BB93DEE00B4D31D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133AE12BB93DEE00B4D31D /* Theme.swift */; };
+		39133AE42BB93E2500B4D31D /* ColorSetForButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133AE32BB93E2500B4D31D /* ColorSetForButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		39133A772BB4067B00B4D31D /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		39133A792BB406BE00B4D31D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		39133A7B2BB408AF00B4D31D /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		39133ADF2BB93DBD00B4D31D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		39133AE12BB93DEE00B4D31D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		39133AE32BB93E2500B4D31D /* ColorSetForButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSetForButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,9 @@
 				39133A742BB405C300B4D31D /* InfoViewController.swift */,
 				39133A772BB4067B00B4D31D /* PostViewController.swift */,
 				39133A792BB406BE00B4D31D /* Post.swift */,
+				39133ADF2BB93DBD00B4D31D /* LoginViewController.swift */,
+				39133AE12BB93DEE00B4D31D /* Theme.swift */,
+				39133AE32BB93E2500B4D31D /* ColorSetForButton.swift */,
 			);
 			path = Navigation5;
 			sourceTree = "<group>";
@@ -160,14 +169,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39133AE42BB93E2500B4D31D /* ColorSetForButton.swift in Sources */,
 				39133A612BB4050000B4D31D /* ViewController.swift in Sources */,
 				39133A5D2BB4050000B4D31D /* AppDelegate.swift in Sources */,
 				39133A782BB4067B00B4D31D /* PostViewController.swift in Sources */,
 				39133A7A2BB406BE00B4D31D /* Post.swift in Sources */,
+				39133AE22BB93DEE00B4D31D /* Theme.swift in Sources */,
 				39133A7C2BB408AF00B4D31D /* ProfileHeaderView.swift in Sources */,
 				39133A732BB405A700B4D31D /* ProfileViewController.swift in Sources */,
 				39133A712BB4058400B4D31D /* FeedViewController.swift in Sources */,
 				39133A752BB405C300B4D31D /* InfoViewController.swift in Sources */,
+				39133AE02BB93DBD00B4D31D /* LoginViewController.swift in Sources */,
 				39133A5F2BB4050000B4D31D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

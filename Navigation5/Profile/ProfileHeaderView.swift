@@ -68,10 +68,10 @@ class ProfileHeaderView: UIView {
     private var statusLabel: UILabel {
         let labelTwo = UILabel()
         labelTwo.numberOfLines = 1
-        labelTwo.text = "StatusLabel"
-        labelTwo.textColor = .black
-        labelTwo.backgroundColor = .gray
-        labelTwo.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        labelTwo.text = "Waiting for somethingh..."
+        labelTwo.textColor = .gray
+        labelTwo.backgroundColor = .lightGray
+        labelTwo.font = UIFont.systemFont(ofSize: 18, weight: .regular)
         labelTwo.translatesAutoresizingMaskIntoConstraints = false
         return labelTwo
         
