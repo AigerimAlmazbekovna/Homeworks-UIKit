@@ -7,23 +7,42 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
-
+final class ProfileViewController: UIViewController {
+    
+    private lazy var profileHeaderView: ProfileHeaderView = {
+        let profileHeaderView = ProfileHeaderView()
+        profileHeaderView.translatesAutoresizingMaskIntoConstraints = false
+        return profileHeaderView
+    }()
+    
+    
+    
+    
+    // MARK: - Setup section
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        #if DEBUG
+        view.backgroundColor = .blue
+        #else
+        view.backgroundColor = .green
+        #endif
+        self.drawSelf()
+        
+    }
+    private func drawSelf() {
+        self.view.backgroundColor = .gray
+        
+        self.view.addSubview(self.profileHeaderView)
+        
+        NSLayoutConstraint.activate([
+            self.profileHeaderView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            self.profileHeaderView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            self.profileHeaderView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
+            
+        ])
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
 }

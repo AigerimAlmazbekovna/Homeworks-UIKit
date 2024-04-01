@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-struct Post {
+public struct Post {
     let author: String
     let description: String
     let image: String
