@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import StorageService
 
 final class PostViewController: UIViewController {
     
@@ -14,7 +15,7 @@ final class PostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = post?.author ?? "-"
+        
         view.backgroundColor = .systemPink
         
         // add a button in the navigtion bar

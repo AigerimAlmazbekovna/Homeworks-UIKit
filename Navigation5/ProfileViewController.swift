@@ -22,7 +22,11 @@ final class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        #if DEBUG
+        view.backgroundColor = .blue
+        #else
+        view.backgroundColor = .green
+        #endif
         self.drawSelf()
         
     }
