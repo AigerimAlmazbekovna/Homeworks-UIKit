@@ -24,8 +24,14 @@
 		39133B252BBAA0B300B4D31D /* StorageService.h in Headers */ = {isa = PBXBuildFile; fileRef = 39133B152BBAA0B300B4D31D /* StorageService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		39133B282BBAA0B300B4D31D /* StorageService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39133B132BBAA0B300B4D31D /* StorageService.framework */; };
 		39133B292BBAA0B300B4D31D /* StorageService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39133B132BBAA0B300B4D31D /* StorageService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		39133B302BBAA0F200B4D31D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133A792BB406BE00B4D31D /* Post.swift */; };
 		39133B322BBAA11900B4D31D /* StorageService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39133B132BBAA0B300B4D31D /* StorageService.framework */; };
+		39133B5A2BBE660C00B4D31D /* PostExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133B592BBE660C00B4D31D /* PostExamples.swift */; };
+		39133B5B2BBE664D00B4D31D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133A792BB406BE00B4D31D /* Post.swift */; };
+		39133B5D2BBE691D00B4D31D /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133B5C2BBE691D00B4D31D /* PostTableViewCell.swift */; };
+		39133B602BBEC1EF00B4D31D /* PhotosColletctionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133B5F2BBEC1EF00B4D31D /* PhotosColletctionViewCell.swift */; };
+		39133B622BBF1B1B00B4D31D /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133B612BBF1B1B00B4D31D /* PhotosTableViewCell.swift */; };
+		39133B642BBF1C7100B4D31D /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133B632BBF1C7100B4D31D /* PhotosViewController.swift */; };
+		39133B662BBFD28C00B4D31D /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133B652BBFD28C00B4D31D /* Photos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +102,12 @@
 		39133B132BBAA0B300B4D31D /* StorageService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StorageService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39133B152BBAA0B300B4D31D /* StorageService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StorageService.h; sourceTree = "<group>"; };
 		39133B162BBAA0B300B4D31D /* StorageService.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = StorageService.docc; sourceTree = "<group>"; };
+		39133B592BBE660C00B4D31D /* PostExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostExamples.swift; sourceTree = "<group>"; };
+		39133B5C2BBE691D00B4D31D /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		39133B5F2BBEC1EF00B4D31D /* PhotosColletctionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosColletctionViewCell.swift; sourceTree = "<group>"; };
+		39133B612BBF1B1B00B4D31D /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
+		39133B632BBF1C7100B4D31D /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		39133B652BBFD28C00B4D31D /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +165,13 @@
 				39133A772BB4067B00B4D31D /* PostViewController.swift */,
 				39133ADF2BB93DBD00B4D31D /* LoginViewController.swift */,
 				39133AE12BB93DEE00B4D31D /* Theme.swift */,
+				39133A792BB406BE00B4D31D /* Post.swift */,
 				39133AE32BB93E2500B4D31D /* ColorSetForButton.swift */,
+				39133B592BBE660C00B4D31D /* PostExamples.swift */,
+				39133B5C2BBE691D00B4D31D /* PostTableViewCell.swift */,
+				39133B5F2BBEC1EF00B4D31D /* PhotosColletctionViewCell.swift */,
+				39133B612BBF1B1B00B4D31D /* PhotosTableViewCell.swift */,
+				39133B652BBFD28C00B4D31D /* Photos.swift */,
 			);
 			path = Navigation5;
 			sourceTree = "<group>";
@@ -162,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				39133A7B2BB408AF00B4D31D /* ProfileHeaderView.swift */,
+				39133B632BBF1C7100B4D31D /* PhotosViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -170,7 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				39133B152BBAA0B300B4D31D /* StorageService.h */,
-				39133A792BB406BE00B4D31D /* Post.swift */,
 				39133B162BBAA0B300B4D31D /* StorageService.docc */,
 			);
 			path = StorageService;
@@ -298,16 +316,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39133B662BBFD28C00B4D31D /* Photos.swift in Sources */,
 				39133AE42BB93E2500B4D31D /* ColorSetForButton.swift in Sources */,
+				39133B642BBF1C7100B4D31D /* PhotosViewController.swift in Sources */,
 				39133A612BB4050000B4D31D /* ViewController.swift in Sources */,
 				39133A5D2BB4050000B4D31D /* AppDelegate.swift in Sources */,
 				39133A782BB4067B00B4D31D /* PostViewController.swift in Sources */,
+				39133B622BBF1B1B00B4D31D /* PhotosTableViewCell.swift in Sources */,
+				39133B5B2BBE664D00B4D31D /* Post.swift in Sources */,
 				39133AE22BB93DEE00B4D31D /* Theme.swift in Sources */,
 				39133A7C2BB408AF00B4D31D /* ProfileHeaderView.swift in Sources */,
+				39133B602BBEC1EF00B4D31D /* PhotosColletctionViewCell.swift in Sources */,
+				39133B5D2BBE691D00B4D31D /* PostTableViewCell.swift in Sources */,
 				39133A732BB405A700B4D31D /* ProfileViewController.swift in Sources */,
 				39133A712BB4058400B4D31D /* FeedViewController.swift in Sources */,
 				39133A752BB405C300B4D31D /* InfoViewController.swift in Sources */,
 				39133AE02BB93DBD00B4D31D /* LoginViewController.swift in Sources */,
+				39133B5A2BBE660C00B4D31D /* PostExamples.swift in Sources */,
 				39133A5F2BB4050000B4D31D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,7 +342,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				39133B172BBAA0B300B4D31D /* StorageService.docc in Sources */,
-				39133B302BBAA0F200B4D31D /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,7 +494,6 @@
 		39133A6E2BB4050200B4D31D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -502,7 +525,6 @@
 		39133A6F2BB4050200B4D31D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
