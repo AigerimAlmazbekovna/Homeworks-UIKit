@@ -165,6 +165,15 @@ final class LoginViewController: UIViewController {
     // MARK: - Event handlers
 
     @objc private func touchLoginButton() {
+        let userName = loginField.text ?? "No name"
+                
+        #if DEBUG
+                let userService = TestUserService()
+        #else
+        let user = User(login: "Aigerim Almazbekova", password: "12345", fullName: "Aigerim", avatar: UIImage(named: "dream1.png") ?? UIImage(), status: "Finding out happinest")
+                let userService = CurrentUserService(user: user)
+        #endif
+        
         let profileVC = ProfileViewController()
         navigationController?.setViewControllers([profileVC], animated: true)
     }
