@@ -11,7 +11,7 @@ import SnapKit
 
 final class ProfileHeaderView: UITableViewHeaderFooterView {
     
-    private lazy var fullnameLabel: UILabel = {
+    var fullnameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
         label.text = "Hipster Cat"
@@ -20,7 +20,7 @@ final class ProfileHeaderView: UITableViewHeaderFooterView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    private lazy var avatarImageView: UIImageView = {
+     var avatarImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = UIImage(named: "cat")

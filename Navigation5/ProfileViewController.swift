@@ -9,6 +9,10 @@ import UIKit
 
 final class ProfileViewController: UIViewController {
     
+    
+    var userService: UserService?
+    var userName: String?
+    
     static let headerIdent = "header"
     static let photoIdent = "photo"
     static let postIdent = "post"
@@ -91,6 +95,12 @@ extension ProfileViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard section == 0 else { return nil }
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: Self.headerIdent) as! ProfileHeaderView
+        #if DEBUG
+        var user = userService?.giveUser(name: userName ?? "Not found")
+        headerView.fullnameLabel.text =  user?.fullName ?? "Not found"
+        #endif
+        
+        
         return headerView
     }
 

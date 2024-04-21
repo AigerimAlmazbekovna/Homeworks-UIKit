@@ -37,7 +37,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let controllers = [feedViewController, profileViewController]
         
         tabBarController.viewControllers = controllers
-        
+
         
         
         window?.rootViewController = tabBarController

@@ -70,6 +70,7 @@ class PostTableViewCell: UITableViewCell {
         setupConstraints()
         self.selectionStyle = .default
         
+      
     }
 
     required init?(coder: NSCoder) {
@@ -109,6 +110,7 @@ class PostTableViewCell: UITableViewCell {
         postLikes.text = "Likes: \(post.likes)"
         viewCounter = post.views
         postViews.text = "Views: \(viewCounter)"
+       
     }
     
     public func processImage(
