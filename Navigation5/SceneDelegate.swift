@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: scene)
         
         let feedViewController = UINavigationController(rootViewController: FeedViewController())
-        let profileViewController = UINavigationController(rootViewController: ProfileViewController())
+        let loginViewController = UINavigationController(rootViewController: LoginViewController())
         
         
         
@@ -30,14 +30,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         feedViewController.title = "Лента"
         feedViewController.view.backgroundColor = .gray
         
-        profileViewController.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person.circle"), tag: 1)
-        profileViewController.title = "Профиль"
-        profileViewController.view.backgroundColor = .lightGray
+        loginViewController.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person.circle"), tag: 1)
+        loginViewController.title = "Профиль"
+        loginViewController.view.backgroundColor = .lightGray
         
-        let controllers = [feedViewController, profileViewController]
+        let controllers = [feedViewController, loginViewController]
         
         tabBarController.viewControllers = controllers
-        
+
         
         
         window?.rootViewController = tabBarController
