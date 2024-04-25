@@ -2,11 +2,11 @@
 //  User.swift
 //  Navigation5
 //
-//  Created by Айгерим on 16.04.2024.
+//  Created by Айгерим on 25.04.2024.
 //
 
+import Foundation
 import UIKit
-
 
 public class User {
     

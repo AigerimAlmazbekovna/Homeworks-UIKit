@@ -8,10 +8,20 @@
 import UIKit
 
 final class ProfileViewController: UIViewController {
+    var user: User?
+    var profileHeader: ProfileHeaderView?
+       
+       init(user: User?) {
+           self.user = user
+           super.init(nibName: nil, bundle: nil)
+       }
+       
+       required init?(coder: NSCoder) {
+           fatalError("init(coder:) has not been implemented")
+       }
     
     
-    var userService: UserService?
-    var userName: String?
+    
     
     static let headerIdent = "header"
     static let photoIdent = "photo"
@@ -95,10 +105,6 @@ extension ProfileViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard section == 0 else { return nil }
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: Self.headerIdent) as! ProfileHeaderView
-        #if DEBUG
-        var user = userService?.giveUser(name: userName ?? "Not found")
-        headerView.fullnameLabel.text =  user?.fullName ?? "Not found"
-        #endif
         
         
         return headerView

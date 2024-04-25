@@ -9,6 +9,7 @@ import UIKit
 
 final class LoginViewController: UIViewController {
     
+    var loginDelegate: LoginViewControllerDelegate?
     // MARK: Visual content
     
     var loginScrollView: UIScrollView = {
@@ -68,6 +69,14 @@ final class LoginViewController: UIViewController {
         login.font = UIFont.systemFont(ofSize: 16)
         login.autocapitalizationType = .none
         login.returnKeyType = .done
+        
+        //Autofill login for Debug and Release
+                #if DEBUG
+                login.text = "Test"
+                #else
+                login.text = "Kenobi"
+                #endif
+        
         return login
     }()
     
@@ -113,7 +122,23 @@ final class LoginViewController: UIViewController {
         
         setupConstraints()
     }
+    private func displayErrorAlert(message: String) {
+            let alert = UIAlertController(
+                title: "Ошибка",
+                message: message,
+                preferredStyle: .alert
+            )
 
+            let okAction = UIAlertAction(
+                title: "OK",
+                style: .default,
+                handler: nil
+            )
+
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+        }
+    
     private func setupConstraints() {
         NSLayoutConstraint.activate([
 
@@ -163,21 +188,37 @@ final class LoginViewController: UIViewController {
     }
     
     // MARK: - Event handlers
-
-    @objc private func touchLoginButton() {
-        let userName = loginField.text ?? "No name"
-                
-        #if DEBUG
-                let userService = TestUserService()
-        #else
-        let user = User(login: "Aigerim Almazbekova", password: "12345", fullName: "Aigerim", avatar: UIImage(named: "dream1.png") ?? UIImage(), status: "Finding out happinest")
-                let userService = CurrentUserService(user: user)
-        #endif
-        
-        let profileVC = ProfileViewController()
-        navigationController?.setViewControllers([profileVC], animated: true)
+    
+    private func displayErrorAlert() {
+        let alert = UIAlertController(
+            title: "Ошибка", message: "oшибка",
+                    preferredStyle: .alert
+                )
+        present(alert, animated: true, completion: nil)
     }
 
+    @objc private func touchLoginButton() {
+        guard let userLogin = loginField.text, !userLogin.isEmpty else {
+              return displayErrorAlert(message: "Введите логин")
+          }
+          guard let userPassword = passwordField.text, !userPassword.isEmpty else {
+              return displayErrorAlert(message: "Введите пароль")
+          }
+          
+          if let validUser = loginDelegate?.check(login: userLogin, password: userPassword) {
+              navigateToProfile(user: validUser)
+          } else {
+              displayErrorAlert(message: "Неверный логин или пароль")
+          }
+      }
+
+      private func navigateToProfile(user: User) {
+          let profileViewController = ProfileViewController(user: user)
+          navigationController?.pushViewController(profileViewController, animated: true)
+      }
+
+  
+    
     @objc private func keyboardShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             loginScrollView.contentOffset.y = keyboardSize.height - (loginScrollView.frame.height - loginButton.frame.minY)
