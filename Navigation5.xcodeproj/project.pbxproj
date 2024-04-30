@@ -20,8 +20,6 @@
 		39133AE02BB93DBD00B4D31D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133ADF2BB93DBD00B4D31D /* LoginViewController.swift */; };
 		39133AE22BB93DEE00B4D31D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133AE12BB93DEE00B4D31D /* Theme.swift */; };
 		39133AE42BB93E2500B4D31D /* ColorSetForButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133AE32BB93E2500B4D31D /* ColorSetForButton.swift */; };
-		39133B172BBAA0B300B4D31D /* StorageService.docc in Sources */ = {isa = PBXBuildFile; fileRef = 39133B162BBAA0B300B4D31D /* StorageService.docc */; };
-		39133B252BBAA0B300B4D31D /* StorageService.h in Headers */ = {isa = PBXBuildFile; fileRef = 39133B152BBAA0B300B4D31D /* StorageService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		39133B282BBAA0B300B4D31D /* StorageService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39133B132BBAA0B300B4D31D /* StorageService.framework */; };
 		39133B292BBAA0B300B4D31D /* StorageService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39133B132BBAA0B300B4D31D /* StorageService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		39133B322BBAA11900B4D31D /* StorageService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39133B132BBAA0B300B4D31D /* StorageService.framework */; };
@@ -33,13 +31,14 @@
 		39133B642BBF1C7100B4D31D /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133B632BBF1C7100B4D31D /* PhotosViewController.swift */; };
 		39133B662BBFD28C00B4D31D /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133B652BBFD28C00B4D31D /* Photos.swift */; };
 		399D3B272BCBB8630018B935 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 399D3B262BCBB8630018B935 /* SnapKit */; };
-		399D3B2A2BCBCA020018B935 /* iOSIntPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 399D3B292BCBCA020018B935 /* iOSIntPackage */; };
 		399D3B2C2BCC3E120018B935 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3B2B2BCC3E120018B935 /* Filters.swift */; };
 		399D3B752BDAB6B60018B935 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3B742BDAB6B60018B935 /* User.swift */; };
 		399D3B772BDAB74F0018B935 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3B762BDAB74F0018B935 /* UserService.swift */; };
 		399D3B792BDAB91E0018B935 /* Cheker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3B782BDAB91E0018B935 /* Cheker.swift */; };
 		399D3B7B2BDAB99F0018B935 /* LoginViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3B7A2BDAB99F0018B935 /* LoginViewControllerDelegate.swift */; };
 		399D3B7E2BDAC1370018B935 /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3B7D2BDAC1370018B935 /* LoginFactory.swift */; };
+		399D3B872BDF923C0018B935 /* iOSIntPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 399D3B862BDF923C0018B935 /* iOSIntPackage */; };
+		399D3B892BE0D2190018B935 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3B882BE0D2190018B935 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,8 +107,6 @@
 		39133AE12BB93DEE00B4D31D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		39133AE32BB93E2500B4D31D /* ColorSetForButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSetForButton.swift; sourceTree = "<group>"; };
 		39133B132BBAA0B300B4D31D /* StorageService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StorageService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		39133B152BBAA0B300B4D31D /* StorageService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StorageService.h; sourceTree = "<group>"; };
-		39133B162BBAA0B300B4D31D /* StorageService.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = StorageService.docc; sourceTree = "<group>"; };
 		39133B592BBE660C00B4D31D /* PostExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostExamples.swift; sourceTree = "<group>"; };
 		39133B5C2BBE691D00B4D31D /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		39133B5F2BBEC1EF00B4D31D /* PhotosColletctionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosColletctionViewCell.swift; sourceTree = "<group>"; };
@@ -122,6 +119,7 @@
 		399D3B782BDAB91E0018B935 /* Cheker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cheker.swift; sourceTree = "<group>"; };
 		399D3B7A2BDAB99F0018B935 /* LoginViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerDelegate.swift; sourceTree = "<group>"; };
 		399D3B7D2BDAC1370018B935 /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
+		399D3B882BE0D2190018B935 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				399D3B2A2BCBCA020018B935 /* iOSIntPackage in Frameworks */,
+				399D3B872BDF923C0018B935 /* iOSIntPackage in Frameworks */,
 				39133B322BBAA11900B4D31D /* StorageService.framework in Frameworks */,
 				39133B282BBAA0B300B4D31D /* StorageService.framework in Frameworks */,
 			);
@@ -150,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				39133A5B2BB4050000B4D31D /* Navigation5 */,
-				39133B142BBAA0B300B4D31D /* StorageService */,
 				39133A5A2BB4050000B4D31D /* Products */,
 				39133B312BBAA11900B4D31D /* Frameworks */,
 			);
@@ -191,6 +188,7 @@
 				39133B612BBF1B1B00B4D31D /* PhotosTableViewCell.swift */,
 				39133B652BBFD28C00B4D31D /* Photos.swift */,
 				399D3B2B2BCC3E120018B935 /* Filters.swift */,
+				399D3B882BE0D2190018B935 /* Photo.swift */,
 			);
 			path = Navigation5;
 			sourceTree = "<group>";
@@ -202,15 +200,6 @@
 				39133B632BBF1C7100B4D31D /* PhotosViewController.swift */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		39133B142BBAA0B300B4D31D /* StorageService */ = {
-			isa = PBXGroup;
-			children = (
-				39133B152BBAA0B300B4D31D /* StorageService.h */,
-				39133B162BBAA0B300B4D31D /* StorageService.docc */,
-			);
-			path = StorageService;
 			sourceTree = "<group>";
 		};
 		39133B312BBAA11900B4D31D /* Frameworks */ = {
@@ -246,7 +235,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39133B252BBAA0B300B4D31D /* StorageService.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +260,7 @@
 			);
 			name = Navigation5;
 			packageProductDependencies = (
-				399D3B292BCBCA020018B935 /* iOSIntPackage */,
+				399D3B862BDF923C0018B935 /* iOSIntPackage */,
 			);
 			productName = Navigation5;
 			productReference = 39133A592BB4050000B4D31D /* Navigation5.app */;
@@ -328,7 +316,7 @@
 			mainGroup = 39133A502BB4050000B4D31D;
 			packageReferences = (
 				399D3B252BCBB8630018B935 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				399D3B282BCBCA020018B935 /* XCRemoteSwiftPackageReference "iOSIntPackage" */,
+				399D3B852BDF923C0018B935 /* XCRemoteSwiftPackageReference "iOSIntPackage" */,
 			);
 			productRefGroup = 39133A5A2BB4050000B4D31D /* Products */;
 			projectDirPath = "";
@@ -373,6 +361,7 @@
 				399D3B7B2BDAB99F0018B935 /* LoginViewControllerDelegate.swift in Sources */,
 				39133A782BB4067B00B4D31D /* PostViewController.swift in Sources */,
 				39133B622BBF1B1B00B4D31D /* PhotosTableViewCell.swift in Sources */,
+				399D3B892BE0D2190018B935 /* Photo.swift in Sources */,
 				39133B5B2BBE664D00B4D31D /* Post.swift in Sources */,
 				399D3B752BDAB6B60018B935 /* User.swift in Sources */,
 				39133AE22BB93DEE00B4D31D /* Theme.swift in Sources */,
@@ -395,7 +384,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39133B172BBAA0B300B4D31D /* StorageService.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,12 +708,12 @@
 				minimumVersion = 5.7.0;
 			};
 		};
-		399D3B282BCBCA020018B935 /* XCRemoteSwiftPackageReference "iOSIntPackage" */ = {
+		399D3B852BDF923C0018B935 /* XCRemoteSwiftPackageReference "iOSIntPackage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/TrueMax/iOSIntPackage";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				branch = imagepublisher;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -736,9 +724,9 @@
 			package = 399D3B252BCBB8630018B935 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		399D3B292BCBCA020018B935 /* iOSIntPackage */ = {
+		399D3B862BDF923C0018B935 /* iOSIntPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 399D3B282BCBCA020018B935 /* XCRemoteSwiftPackageReference "iOSIntPackage" */;
+			package = 399D3B852BDF923C0018B935 /* XCRemoteSwiftPackageReference "iOSIntPackage" */;
 			productName = iOSIntPackage;
 		};
 /* End XCSwiftPackageProductDependency section */

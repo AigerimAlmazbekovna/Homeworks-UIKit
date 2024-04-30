@@ -20,3 +20,4 @@ final class Photos {
         examples = photos.shuffled()
     }
 }
+    

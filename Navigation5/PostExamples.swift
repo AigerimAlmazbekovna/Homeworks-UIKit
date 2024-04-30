@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-import StorageService
+//import StorageService
 
 let postExamples: [Post] = [
     Post(author: "Aigerim Almazbekova",

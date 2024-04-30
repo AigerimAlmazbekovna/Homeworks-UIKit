@@ -6,9 +6,15 @@
 //
 
 import UIKit
+import iOSIntPackage
 
 class PhotosViewController: UIViewController {
     
+    let facade = ImagePublisherFacade()
+        
+    var galleryImages: [UIImage] = []
+    
+    var photoGallery = Photo.makeImages()
     let photoIdent = "photoCell"
 
     // MARK: Visual objects
@@ -33,35 +39,63 @@ class PhotosViewController: UIViewController {
     // MARK: - Setup section
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+            super.viewDidLoad()
+
+            setupUI()
+            setupConstraints()
+            
+            facade.subscribe(self)
+            facade.addImagesWithTimer(time: 0.5, repeat: 20, userImages: photoGallery)
+            
+        }
+        override func viewWillDisappear(_ animated: Bool) {
+            facade.removeSubscription(for: self)
+        }
         
-        self.title = "Photo Gallery"
-        self.view.addSubview(photosCollectionView)
-        self.photosCollectionView.dataSource = self
-        self.photosCollectionView.delegate = self
-        setupConstraints()
-    }
-    
-    private func setupConstraints() {
-        NSLayoutConstraint.activate([
-            photosCollectionView.topAnchor.constraint(equalTo: self.view.topAnchor),
-            photosCollectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            photosCollectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            photosCollectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
-        ])
-    }
+        override func viewWillTransition(
+            to size: CGSize,
+            with coordinator: UIViewControllerTransitionCoordinator
+        ) {
+            super.viewWillTransition(to: size, with: coordinator)
+            
+            coordinator.animate(alongsideTransition: { [weak self] context in
+                guard let self = self else {
+                    return
+                }
+                
+                self.photosCollectionView.collectionViewLayout.invalidateLayout()
+            }, completion: { context in })
+        }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.isHidden = false
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.navigationBar.isHidden = true
-    }
-}
+        
+        
+       //MARK: - Private
+        
+        private func setupUI() {
+            title = "Photo Gallery"
+            view.addSubview(photosCollectionView)
+            photosCollectionView.dataSource = self
+            photosCollectionView.delegate = self
+        }
+        
+        // MARK: - Setting constraints
+        
+        private func setupConstraints() {
+            NSLayoutConstraint.activate([
+                photosCollectionView.topAnchor.constraint(equalTo: view.topAnchor),
+                photosCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                photosCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                photosCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            ])
+        }
 
+        override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            navigationController?.isNavigationBarHidden = false
+
+        }
+    }
+   
 // MARK: - Extensions
 
 extension PhotosViewController: UICollectionViewDelegateFlowLayout {
@@ -84,5 +118,11 @@ extension PhotosViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: photoIdent, for: indexPath) as? PhotosCollectionViewCell else { return UICollectionViewCell()}
         cell.configCellCollection(photo: Photos.shared.examples[indexPath.item])
         return cell
+    }
+}
+extension PhotosViewController: ImageLibrarySubscriber {
+    func receive(images: [UIImage]) {
+        galleryImages = images
+        photosCollectionView.reloadData()
     }
 }
