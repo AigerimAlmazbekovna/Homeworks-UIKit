@@ -49,23 +49,26 @@ final class ProfileHeaderView: UITableViewHeaderFooterView {
         
         return textField
     }()
-    
-    private lazy var showStatusButton: UIButton = {
-        let button = UIButton()
-        button.tintColor = .white
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .systemBlue
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-        button.layer.cornerRadius = 10
-        button.layer.shadowOffset = CGSize(width: 4, height: 4)
-        button.layer.shadowColor = UIColor.black.cgColor
-        button.layer.shadowRadius = 4
-        button.layer.shadowOpacity = 0.7
-        button.setTitle("Show status", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.addTarget(self, action: #selector(statusButtonPressed), for: .touchUpInside)
+    //Замените для всех экранов стандартные UIButton на вашу собственную CustomButton там, где это целесообразно. Обратите внимание, насколько ваш исходный код стал компактнее и яснее.
+    private lazy var showStatusButton: CustomButton = {
+        let button = CustomButton(title: "Show status", titleColor: .white) { [weak self] in
+            self?.statusButtonPressed()
+                    }
         return button
     }()
+      //  button.tintColor = .white
+       // button.translatesAutoresizingMaskIntoConstraints = false
+       // button.backgroundColor = .systemBlue
+       // button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+      //  button.layer.cornerRadius = 10
+       // button.layer.shadowOffset = CGSize(width: 4, height: 4)
+      //  button.layer.shadowColor = UIColor.black.cgColor
+      //  button.layer.shadowRadius = 4
+       // button.layer.shadowOpacity = 0.7
+       // button.setTitle("Show status", for: .normal)
+       // button.setTitleColor(.white, for: .normal)
+       // button.addTarget(self, action: #selector(statusButtonPressed), for: .touchUpInside)
+     
     private var statusLabel: UILabel {
         let labelTwo = UILabel()
         labelTwo.numberOfLines = 1

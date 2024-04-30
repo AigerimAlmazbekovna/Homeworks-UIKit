@@ -106,7 +106,7 @@ class PostTableViewCell: UITableViewCell {
     func configPostArray(post: Post) {
         postAuthor.text = post.author
         postDescription.text = post.description
-        postImage.image = UIImage(named: post.image)
+        postImage.image = UIImage(named: post.image ?? "Empty")
         postLikes.text = "Likes: \(post.likes)"
         viewCounter = post.views
         postViews.text = "Views: \(viewCounter)"

@@ -43,17 +43,20 @@ final class LoginViewController: UIViewController {
         stack.clipsToBounds = true
         return stack
     }()
-    
-    var loginButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
+    //Замените для всех экранов стандартные UIButton на вашу собственную CustomButton там, где это целесообразно. Обратите внимание, насколько ваш исходный код стал компактнее и яснее.
+   private lazy var loginButton: CustomButton = {
+        let button = CustomButton(title: "Log In", titleColor: .white) { [weak self] in
+                        self?.touchLoginButton()
+            
+        }
+       // button.translatesAutoresizingMaskIntoConstraints = false
      
-        button.backgroundColor = Theme.currentColor.backroundColor
-        button.setTitle("Log In", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.addTarget(nil, action: #selector(touchLoginButton), for: .touchUpInside)
-        button.layer.cornerRadius = 12
-        button.clipsToBounds = true
+       // button.backgroundColor = Theme.currentColor.backroundColor
+       // button.setTitle("Log In", for: .normal)
+       // button.setTitleColor(.white, for: .normal)
+       // button.addTarget(nil, action: #selector(touchLoginButton), for: .touchUpInside)
+       // button.layer.cornerRadius = 12
+       // button.clipsToBounds = true
         return button
     }()
     
@@ -197,7 +200,8 @@ final class LoginViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
 
-    @objc private func touchLoginButton() {
+   // @objc
+   private func touchLoginButton() {
         guard let userLogin = loginField.text, !userLogin.isEmpty else {
               return displayErrorAlert(message: "Введите логин")
           }

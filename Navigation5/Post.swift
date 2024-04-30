@@ -7,11 +7,40 @@
 
 import Foundation
 import UIKit
+
 public struct Post {
-    public let author: String
-    public let description: String
-    public let image: String
-    public let likes: Int
-    public let views: Int
+    
+    
+    public var author: String
+    public var description: String
+    public var image: String?
+    public var likes: Int
+    public var views: Int
+    
+    public init(
+
+        author: String,
+        description: String,
+        image: String? = nil,
+        likes: Int,
+        views: Int
+    ) {
+    
+        self.author = author
+        self.description = description
+        self.image = image
+        self.likes = likes
+        self.views = views
+    }
 }
 
+//MARK: - Post Title
+
+public struct PostTitle {
+    
+   public var title: String
+    
+    public init(title: String) {
+        self.title = title
+    }
+}
