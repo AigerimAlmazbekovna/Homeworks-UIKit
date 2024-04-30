@@ -16,38 +16,81 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let scene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: scene)
-        
-        let feedViewController = UINavigationController(rootViewController: FeedViewController())
-        let profileViewController = UINavigationController(rootViewController: ProfileViewController())
-        
-        
-        
-        let tabBarController = UITabBarController()
-        
-        feedViewController.tabBarItem = UITabBarItem(title: "Лента", image: UIImage(systemName: "doc.richtext"), tag: 0)
-        feedViewController.title = "Лента"
-        feedViewController.view.backgroundColor = .gray
-        
-        profileViewController.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person.circle"), tag: 1)
-        profileViewController.title = "Профиль"
-        profileViewController.view.backgroundColor = .lightGray
-        
-        let controllers = [feedViewController, profileViewController]
-        
-        tabBarController.viewControllers = controllers
-        
-        
-        
-        window?.rootViewController = tabBarController
-        window?.makeKeyAndVisible()
-        
-    }
-    
-}
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+               
+               let window = UIWindow(windowScene: windowScene)
+               
+               window.rootViewController = createTabBarController(with: MyLoginFactory())
+               
+               window.makeKeyAndVisible()
+               self.window = window
+               self.window?.overrideUserInterfaceStyle = .light
+           }
+       }
+
+           //MARK: - Private
+
+           private func createTabBarController(with factory: LoginFactory) -> UITabBarController {
+               
+               let tabBarController = UITabBarController()
+               
+               let appearance = UITabBarAppearance()
+               appearance.backgroundColor = .white
+               
+               setTabBarItemColors(appearance.stackedLayoutAppearance)
+               setTabBarItemColors(appearance.inlineLayoutAppearance)
+               setTabBarItemColors(appearance.compactInlineLayoutAppearance)
+               
+               setTabBarBadgeAppearance(appearance.stackedLayoutAppearance)
+               setTabBarBadgeAppearance(appearance.inlineLayoutAppearance)
+               setTabBarBadgeAppearance(appearance.compactInlineLayoutAppearance)
+               
+               tabBarController.tabBar.standardAppearance = appearance
+               if #available(iOS 15.0, *) {
+                   tabBarController.tabBar.scrollEdgeAppearance = appearance
+               }
+               tabBarController.tabBar.isTranslucent = false
+               
+               let feedViewController = FeedViewController()
+               feedViewController.tabBarItem.image = UIImage(systemName: "house.fill")
+               feedViewController.title = "Feed"
+
+               let profileViewController = LoginViewController()
+               profileViewController.tabBarItem.image = UIImage(systemName: "person.fill")
+               profileViewController.title = "Profile"
+               
+               profileViewController.loginDelegate = factory.makeLoginInspector()
+
+               tabBarController.viewControllers = [
+                   UINavigationController(rootViewController: feedViewController),
+                   UINavigationController(rootViewController: profileViewController)
+               ]
+
+               return tabBarController
+           }
 
 
+           private func setTabBarItemColors(_ itemAppearance: UITabBarItemAppearance) {
+               itemAppearance.normal.iconColor = .systemGray
+               itemAppearance.normal.titleTextAttributes = [
+                   NSAttributedString.Key.foregroundColor: UIColor.systemGray,
+                   NSAttributedString.Key.paragraphStyle: NSParagraphStyle.default
+               ]
+               
+               itemAppearance.selected.iconColor = .black
+               itemAppearance.selected.titleTextAttributes = [
+                   NSAttributedString.Key.foregroundColor: UIColor.black,
+                   NSAttributedString.Key.paragraphStyle: NSParagraphStyle.default
+               ]
+               
+           }
+
+           private func setTabBarBadgeAppearance(_ itemAppearance: UITabBarItemAppearance) {
+               itemAppearance.normal.badgeBackgroundColor = .systemRed
+               itemAppearance.normal.badgeTextAttributes = [
+                   NSAttributedString.Key.foregroundColor: UIColor.systemRed
+               ]
+           }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
