@@ -111,12 +111,14 @@ extension PhotosViewController: UICollectionViewDelegateFlowLayout {
 extension PhotosViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Photos.shared.examples.count
+        return galleryImages.count
+        //Photos.shared.examples.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: photoIdent, for: indexPath) as? PhotosCollectionViewCell else { return UICollectionViewCell()}
-        cell.configCellCollection(photo: Photos.shared.examples[indexPath.item])
+        cell.configCellCollection(photo: galleryImages[indexPath.item])
+                                    //Photos.shared.examples[indexPath.item])
         return cell
     }
 }

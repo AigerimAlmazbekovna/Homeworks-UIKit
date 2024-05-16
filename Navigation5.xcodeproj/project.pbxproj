@@ -12,8 +12,6 @@
 		39133A612BB4050000B4D31D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133A602BB4050000B4D31D /* ViewController.swift */; };
 		39133A662BB4050200B4D31D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39133A652BB4050200B4D31D /* Assets.xcassets */; };
 		39133A692BB4050200B4D31D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39133A672BB4050200B4D31D /* LaunchScreen.storyboard */; };
-		39133A732BB405A700B4D31D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133A722BB405A700B4D31D /* ProfileViewController.swift */; };
-		39133A7C2BB408AF00B4D31D /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133A7B2BB408AF00B4D31D /* ProfileHeaderView.swift */; };
 		39133AE02BB93DBD00B4D31D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133ADF2BB93DBD00B4D31D /* LoginViewController.swift */; };
 		39133AE22BB93DEE00B4D31D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133AE12BB93DEE00B4D31D /* Theme.swift */; };
 		39133AE42BB93E2500B4D31D /* ColorSetForButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133AE32BB93E2500B4D31D /* ColorSetForButton.swift */; };
@@ -42,6 +40,8 @@
 		399D3B962BE162E90018B935 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3B952BE162E90018B935 /* InfoViewController.swift */; };
 		399D3B982BE167B10018B935 /* PostViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3B972BE167B10018B935 /* PostViewContoller.swift */; };
 		399D3B9A2BE169520018B935 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3B992BE169520018B935 /* FeedView.swift */; };
+		399D3BD82BEE0C5E0018B935 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3BD72BEE0C5E0018B935 /* ProfileViewController.swift */; };
+		399D3BDA2BEE0CA80018B935 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3BD92BEE0CA80018B935 /* ProfileHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,9 +100,7 @@
 		39133A652BB4050200B4D31D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39133A682BB4050200B4D31D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39133A6A2BB4050200B4D31D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		39133A722BB405A700B4D31D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		39133A792BB406BE00B4D31D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		39133A7B2BB408AF00B4D31D /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		39133ADF2BB93DBD00B4D31D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		39133AE12BB93DEE00B4D31D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		39133AE32BB93E2500B4D31D /* ColorSetForButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSetForButton.swift; sourceTree = "<group>"; };
@@ -126,6 +124,8 @@
 		399D3B952BE162E90018B935 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		399D3B972BE167B10018B935 /* PostViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewContoller.swift; sourceTree = "<group>"; };
 		399D3B992BE169520018B935 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		399D3BD72BEE0C5E0018B935 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		399D3BD92BEE0CA80018B935 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,20 +171,21 @@
 		39133A5B2BB4050000B4D31D /* Navigation5 */ = {
 			isa = PBXGroup;
 			children = (
-				399D3B8D2BE161C40018B935 /* FeedMVC */,
+				399D3BD22BE94B930018B935 /* Profile */,
+				399D3BCB2BE943A80018B935 /* Feed */,
 				399D3B8A2BE156370018B935 /* App */,
 				399D3B7C2BDAC1120018B935 /* Factory */,
 				399D3B732BDAB6A40018B935 /* User */,
-				39133A762BB4065B00B4D31D /* Profile */,
 				39133A602BB4050000B4D31D /* ViewController.swift */,
 				39133A672BB4050200B4D31D /* LaunchScreen.storyboard */,
 				39133A6A2BB4050200B4D31D /* Info.plist */,
-				39133A722BB405A700B4D31D /* ProfileViewController.swift */,
 				39133ADF2BB93DBD00B4D31D /* LoginViewController.swift */,
 				39133AE12BB93DEE00B4D31D /* Theme.swift */,
 				39133A792BB406BE00B4D31D /* Post.swift */,
 				39133AE32BB93E2500B4D31D /* ColorSetForButton.swift */,
+				399D3B952BE162E90018B935 /* InfoViewController.swift */,
 				39133B592BBE660C00B4D31D /* PostExamples.swift */,
+				39133B632BBF1C7100B4D31D /* PhotosViewController.swift */,
 				39133B5C2BBE691D00B4D31D /* PostTableViewCell.swift */,
 				39133B5F2BBEC1EF00B4D31D /* PhotosColletctionViewCell.swift */,
 				39133B612BBF1B1B00B4D31D /* PhotosTableViewCell.swift */,
@@ -195,15 +196,6 @@
 				399D3B972BE167B10018B935 /* PostViewContoller.swift */,
 			);
 			path = Navigation5;
-			sourceTree = "<group>";
-		};
-		39133A762BB4065B00B4D31D /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				39133A7B2BB408AF00B4D31D /* ProfileHeaderView.swift */,
-				39133B632BBF1C7100B4D31D /* PhotosViewController.swift */,
-			);
-			path = Profile;
 			sourceTree = "<group>";
 		};
 		39133B312BBAA11900B4D31D /* Frameworks */ = {
@@ -242,39 +234,23 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		399D3B8D2BE161C40018B935 /* FeedMVC */ = {
+		399D3BCB2BE943A80018B935 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				399D3B902BE162270018B935 /* View */,
-				399D3B8F2BE1621A0018B935 /* Model */,
-				399D3B8E2BE1620E0018B935 /* Contoller */,
-			);
-			path = FeedMVC;
-			sourceTree = "<group>";
-		};
-		399D3B8E2BE1620E0018B935 /* Contoller */ = {
-			isa = PBXGroup;
-			children = (
+				399D3B992BE169520018B935 /* FeedView.swift */,
 				399D3B912BE162700018B935 /* FeedViewController.swift */,
-			);
-			path = Contoller;
-			sourceTree = "<group>";
-		};
-		399D3B8F2BE1621A0018B935 /* Model */ = {
-			isa = PBXGroup;
-			children = (
 				399D3B932BE1629D0018B935 /* FeedModel.swift */,
 			);
-			path = Model;
+			path = Feed;
 			sourceTree = "<group>";
 		};
-		399D3B902BE162270018B935 /* View */ = {
+		399D3BD22BE94B930018B935 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				399D3B952BE162E90018B935 /* InfoViewController.swift */,
-				399D3B992BE169520018B935 /* FeedView.swift */,
+				399D3BD72BEE0C5E0018B935 /* ProfileViewController.swift */,
+				399D3BD92BEE0CA80018B935 /* ProfileHeaderView.swift */,
 			);
-			path = View;
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,9 +385,11 @@
 				399D3B792BDAB91E0018B935 /* Cheker.swift in Sources */,
 				39133AE42BB93E2500B4D31D /* ColorSetForButton.swift in Sources */,
 				39133B642BBF1C7100B4D31D /* PhotosViewController.swift in Sources */,
+				399D3BDA2BEE0CA80018B935 /* ProfileHeaderView.swift in Sources */,
 				39133A612BB4050000B4D31D /* ViewController.swift in Sources */,
 				39133A5D2BB4050000B4D31D /* AppDelegate.swift in Sources */,
 				399D3B7B2BDAB99F0018B935 /* LoginViewControllerDelegate.swift in Sources */,
+				399D3BD82BEE0C5E0018B935 /* ProfileViewController.swift in Sources */,
 				39133B622BBF1B1B00B4D31D /* PhotosTableViewCell.swift in Sources */,
 				399D3B942BE1629D0018B935 /* FeedModel.swift in Sources */,
 				399D3B892BE0D2190018B935 /* Photo.swift in Sources */,
@@ -419,12 +397,10 @@
 				399D3B752BDAB6B60018B935 /* User.swift in Sources */,
 				39133AE22BB93DEE00B4D31D /* Theme.swift in Sources */,
 				399D3B2C2BCC3E120018B935 /* Filters.swift in Sources */,
-				39133A7C2BB408AF00B4D31D /* ProfileHeaderView.swift in Sources */,
 				399D3B7E2BDAC1370018B935 /* LoginFactory.swift in Sources */,
 				39133B602BBEC1EF00B4D31D /* PhotosColletctionViewCell.swift in Sources */,
 				39133B5D2BBE691D00B4D31D /* PostTableViewCell.swift in Sources */,
 				399D3B772BDAB74F0018B935 /* UserService.swift in Sources */,
-				39133A732BB405A700B4D31D /* ProfileViewController.swift in Sources */,
 				39133AE02BB93DBD00B4D31D /* LoginViewController.swift in Sources */,
 				39133B5A2BBE660C00B4D31D /* PostExamples.swift in Sources */,
 				39133A5F2BB4050000B4D31D /* SceneDelegate.swift in Sources */,
