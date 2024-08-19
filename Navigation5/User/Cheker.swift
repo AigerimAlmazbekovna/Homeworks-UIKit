@@ -11,7 +11,7 @@ import UIKit
 final class Checker {
     
     let userLogin: String?
-    let userPassword: String?
+    var userPassword: String?
     
     var service: UserService
     static let shared = Checker()
