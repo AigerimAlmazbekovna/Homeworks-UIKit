@@ -10,8 +10,6 @@ import UIKit
 final class LoginViewController: UIViewController {
     
     var loginDelegate: LoginViewControllerDelegate?
-    
-    var bruteForce = BruteForce()
     // MARK: Visual content
     
     var loginScrollView: UIScrollView = {
@@ -62,20 +60,6 @@ final class LoginViewController: UIViewController {
         return button
     }()
     
-    private lazy var getPassword: CustomButton = {
-            let button = CustomButton(title: "Подобрать пароль", titleColor: .white) { [weak self] in
-                self?.bruteForceAction()
-            }
-            return button
-        }()
-        
-    let activityIndicator: UIActivityIndicatorView = {
-            let indicator = UIActivityIndicatorView(style: .medium)
-            indicator.translatesAutoresizingMaskIntoConstraints = false
-            
-            return indicator
-        }()
-        
     var loginField: UITextField = {
         let login = UITextField()
         login.translatesAutoresizingMaskIntoConstraints = false
@@ -141,41 +125,6 @@ final class LoginViewController: UIViewController {
         
         setupConstraints()
     }
-    
-    private func bruteForceAction() {
-            
-            let start = Date()
-            
-            self.activityIndicator.isHidden = false
-            self.activityIndicator.startAnimating()
-            passwordField.placeholder = ""
-            
-            
-            DispatchQueue.global(qos: .utility).async {
-                let password = self.bruteForce.generatePassword()
-                
-                Checker.shared.userPassword = password
-                
-                print("Random password: ", password)
-                let passwordBruteForce = self.bruteForce.bruteForce(passwordToUnlock: password)
-                
-                print("Password find: ", passwordBruteForce)
-                
-                let end = Date()
-                
-                DispatchQueue.main.async {
-                    self.passwordField.text = passwordBruteForce
-                    self.passwordField.isSecureTextEntry = false
-                    self.activityIndicator.isHidden = true
-                    self.activityIndicator.stopAnimating()
-                }
-                
-                let findTime = end.timeIntervalSince(start)
-                print("Password finding time: \(findTime)")
-            }
-        }
-    
-    
     private func displayErrorAlert(message: String) {
             let alert = UIAlertController(
                 title: "Ошибка",
