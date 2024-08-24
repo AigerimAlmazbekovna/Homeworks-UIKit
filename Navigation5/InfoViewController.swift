@@ -2,57 +2,70 @@
 //  InfoViewController.swift
 //  Navigation5
 //
-//  Created by Айгерим on 27.03.2024.
+//  Created by Айгерим on 30.04.2024.
 //
 
+import Foundation
 import UIKit
-
-import UIKit
+//import StorageService
 
 final class InfoViewController: UIViewController {
-
+    
+    var postTitle: PostTitle?
+    
+    //MARK: - UI Elements
+    
+    private lazy var showAlert: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Show Alert", for: .normal)
+        button.tintColor = .black
+        button.addTarget(self, action: #selector(showAlert(_:)), for: .touchUpInside)
+        return button
+    }()
+    
+    //MARK: - View Controller Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .systemGray6
+        self.view.backgroundColor = .white
         
-        createAlertButton()
-    }
-    
-    private func createAlertButton() {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Alert", for: .normal)
-        button.backgroundColor = .systemPink
-        button.setTitleColor(.white, for: .normal)
-    
-        button.addTarget(self, action: #selector(tapAlertButton), for: .touchUpInside)
-                
-        view.addSubview(button)
+        view.addSubview(showAlert)
+        
+        showAlert.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            button.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
-            button.heightAnchor.constraint(equalToConstant: 50),
-            button.widthAnchor.constraint(equalToConstant: 100)
+            showAlert.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            showAlert.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
     }
     
-    @objc func tapAlertButton() {
-        let alert = UIAlertController(title: "Attention",
-                                      message: "How are you feeling?",
-                                      preferredStyle: .alert)
-        // add two buttons
-        let fine = UIAlertAction(title: "Fine", style: .default) { _ in
-            print("Fine")
-        }
-        alert.addAction(fine)
+    //MARK: - Actions
+    
+    @objc func showAlert(_ sender: UIButton) {
         
-        let so = UIAlertAction(title: "So-so", style: .destructive) { _ in
-            print("So-so")
+        // Create an instance of UIAlertController to display a pop-up message
+        
+        let alertController = UIAlertController(
+            title: "Alert Window",
+            message: "Alert Message",
+            preferredStyle: .alert
+        )
+        
+        // Create "OK" and "Cancel" buttons for the UIAlertController, which will display corresponding messages in the console
+        
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            print("OK button tapped")
         }
-        alert.addAction(so)
-
-        self.present(alert, animated: true, completion: nil)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            print("Cancel button tapped")
+        }
+        
+        // Add the created buttons to the UIAlertController
+        
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
 }
