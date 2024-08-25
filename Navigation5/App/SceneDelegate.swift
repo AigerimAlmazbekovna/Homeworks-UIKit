@@ -63,13 +63,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                       runLoopViewController.tabBarItem.image = UIImage(systemName: "house.fill")
                       runLoopViewController.title = "RunLoop"
                       
+                      let errorViewController = ErrorViewController()
+                      errorViewController.tabBarItem.image = UIImage(systemName: "house.fill")
+                      errorViewController.title = "Error"
                     
                       profileViewController.loginDelegate = factory.makeLoginInspector()
 
                       tabBarController.viewControllers = [
                           UINavigationController(rootViewController: feedViewController),
                           UINavigationController(rootViewController: profileViewController),
-                          UINavigationController(rootViewController: runLoopViewController)
+                          UINavigationController(rootViewController: runLoopViewController),
+                          UINavigationController(rootViewController: errorViewController)
                       ]
 
                       return tabBarController

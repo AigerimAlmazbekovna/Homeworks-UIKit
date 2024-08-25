@@ -44,6 +44,9 @@
 		399D3BDA2BEE0CA80018B935 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3BD92BEE0CA80018B935 /* ProfileHeaderView.swift */; };
 		399D3BDE2C73ABC90018B935 /* BrutForse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3BDD2C73ABC90018B935 /* BrutForse.swift */; };
 		399D3BE02C77943B0018B935 /* RunLoopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3BDF2C77943B0018B935 /* RunLoopViewController.swift */; };
+		399D3C062C79E5130018B935 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3C052C79E5130018B935 /* ErrorViewController.swift */; };
+		399D3C092C79E57A0018B935 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3C082C79E57A0018B935 /* ApiError.swift */; };
+		399D3C0B2C79E5AD0018B935 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3C0A2C79E5AD0018B935 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +133,9 @@
 		399D3BD92BEE0CA80018B935 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		399D3BDD2C73ABC90018B935 /* BrutForse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrutForse.swift; sourceTree = "<group>"; };
 		399D3BDF2C77943B0018B935 /* RunLoopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopViewController.swift; sourceTree = "<group>"; };
+		399D3C052C79E5130018B935 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
+		399D3C082C79E57A0018B935 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		399D3C0A2C79E5AD0018B935 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,7 @@
 		39133A5B2BB4050000B4D31D /* Navigation5 */ = {
 			isa = PBXGroup;
 			children = (
+				399D3C072C79E51D0018B935 /* Error */,
 				399D3BD22BE94B930018B935 /* Profile */,
 				399D3BCB2BE943A80018B935 /* Feed */,
 				399D3B8A2BE156370018B935 /* App */,
@@ -257,6 +264,16 @@
 				399D3BD92BEE0CA80018B935 /* ProfileHeaderView.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		399D3C072C79E51D0018B935 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				399D3C052C79E5130018B935 /* ErrorViewController.swift */,
+				399D3C082C79E57A0018B935 /* ApiError.swift */,
+				399D3C0A2C79E5AD0018B935 /* NetworkService.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,10 +408,13 @@
 				399D3B792BDAB91E0018B935 /* Cheker.swift in Sources */,
 				39133AE42BB93E2500B4D31D /* ColorSetForButton.swift in Sources */,
 				39133B642BBF1C7100B4D31D /* PhotosViewController.swift in Sources */,
+				399D3C0B2C79E5AD0018B935 /* NetworkService.swift in Sources */,
 				399D3BDA2BEE0CA80018B935 /* ProfileHeaderView.swift in Sources */,
 				39133A612BB4050000B4D31D /* ViewController.swift in Sources */,
+				399D3C062C79E5130018B935 /* ErrorViewController.swift in Sources */,
 				39133A5D2BB4050000B4D31D /* AppDelegate.swift in Sources */,
 				399D3B7B2BDAB99F0018B935 /* LoginViewControllerDelegate.swift in Sources */,
+				399D3C092C79E57A0018B935 /* ApiError.swift in Sources */,
 				399D3BD82BEE0C5E0018B935 /* ProfileViewController.swift in Sources */,
 				39133B622BBF1B1B00B4D31D /* PhotosTableViewCell.swift in Sources */,
 				399D3B942BE1629D0018B935 /* FeedModel.swift in Sources */,
