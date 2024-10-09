@@ -10,6 +10,8 @@ import UIKit
 
 final class ProfileViewController: UIViewController {
     var user: User?
+    
+    var mycolor = UIColor.createColor(dark: .gray, any: .black)
     var profileHeader: ProfileHeaderView?
        
        init(user: User?) {
@@ -42,8 +44,7 @@ final class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .systemBackground
-        
+        view.backgroundColor = mycolor
         view.addSubview(Self.postTableView)
         setupConstraints()
         Self.postTableView.dataSource = self
@@ -60,6 +61,17 @@ final class ProfileViewController: UIViewController {
             Self.postTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
+    
+    override var overrideUserInterfaceStyle: UIUserInterfaceStyle {
+        get {
+            .dark
+        }
+        set {
+            
+        }
+    }
+    
+    
 
     @objc func reloadTableView() {
         Self.postTableView.reloadData()

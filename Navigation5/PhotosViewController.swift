@@ -16,7 +16,8 @@ class PhotosViewController: UIViewController {
     
     var photoGallery = Photo.makeImages()
     let photoIdent = "photoCell"
-
+    
+    var mycolor = UIColor.createColor(dark: .gray, any: .black)
     // MARK: Visual objects
     
     lazy var layout: UICollectionViewFlowLayout = {
@@ -40,7 +41,7 @@ class PhotosViewController: UIViewController {
     
     override func viewDidLoad() {
             super.viewDidLoad()
-
+            view.backgroundColor = mycolor
             setupUI()
             setupConstraints()
             
@@ -48,6 +49,16 @@ class PhotosViewController: UIViewController {
             facade.addImagesWithTimer(time: 0.5, repeat: 20, userImages: photoGallery)
             
         }
+    
+    override var overrideUserInterfaceStyle: UIUserInterfaceStyle {
+        get {
+            .dark
+        }
+        set {
+            
+        }
+    }
+    
         override func viewWillDisappear(_ animated: Bool) {
             facade.removeSubscription(for: self)
         }

@@ -17,7 +17,7 @@ extension Photo {
     static func makeImages() -> [UIImage] {
         let photos = self.make()
         
-        var images: [UIImage] =
+        let images: [UIImage] =
         photos.compactMap { UIImage(named: $0.image) }
         
         return images

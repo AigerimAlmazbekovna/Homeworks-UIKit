@@ -25,6 +25,7 @@
 		39133B622BBF1B1B00B4D31D /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133B612BBF1B1B00B4D31D /* PhotosTableViewCell.swift */; };
 		39133B642BBF1C7100B4D31D /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133B632BBF1C7100B4D31D /* PhotosViewController.swift */; };
 		39133B662BBFD28C00B4D31D /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39133B652BBFD28C00B4D31D /* Photos.swift */; };
+		3947822F2CB53A1900AB1D15 /* UIColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3947822E2CB53A1900AB1D15 /* UIColorExtention.swift */; };
 		399D3B272BCBB8630018B935 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 399D3B262BCBB8630018B935 /* SnapKit */; };
 		399D3B2C2BCC3E120018B935 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3B2B2BCC3E120018B935 /* Filters.swift */; };
 		399D3B752BDAB6B60018B935 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3B742BDAB6B60018B935 /* User.swift */; };
@@ -44,9 +45,6 @@
 		399D3BDA2BEE0CA80018B935 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3BD92BEE0CA80018B935 /* ProfileHeaderView.swift */; };
 		399D3BDE2C73ABC90018B935 /* BrutForse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3BDD2C73ABC90018B935 /* BrutForse.swift */; };
 		399D3BE02C77943B0018B935 /* RunLoopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3BDF2C77943B0018B935 /* RunLoopViewController.swift */; };
-		399D3C062C79E5130018B935 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3C052C79E5130018B935 /* ErrorViewController.swift */; };
-		399D3C092C79E57A0018B935 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3C082C79E57A0018B935 /* ApiError.swift */; };
-		399D3C0B2C79E5AD0018B935 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D3C0A2C79E5AD0018B935 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +114,7 @@
 		39133B612BBF1B1B00B4D31D /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
 		39133B632BBF1C7100B4D31D /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		39133B652BBFD28C00B4D31D /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		3947822E2CB53A1900AB1D15 /* UIColorExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtention.swift; sourceTree = "<group>"; };
 		399D3B2B2BCC3E120018B935 /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 		399D3B742BDAB6B60018B935 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		399D3B762BDAB74F0018B935 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -133,9 +132,6 @@
 		399D3BD92BEE0CA80018B935 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		399D3BDD2C73ABC90018B935 /* BrutForse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrutForse.swift; sourceTree = "<group>"; };
 		399D3BDF2C77943B0018B935 /* RunLoopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopViewController.swift; sourceTree = "<group>"; };
-		399D3C052C79E5130018B935 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
-		399D3C082C79E57A0018B935 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
-		399D3C0A2C79E5AD0018B935 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +177,6 @@
 		39133A5B2BB4050000B4D31D /* Navigation5 */ = {
 			isa = PBXGroup;
 			children = (
-				399D3C072C79E51D0018B935 /* Error */,
 				399D3BD22BE94B930018B935 /* Profile */,
 				399D3BCB2BE943A80018B935 /* Feed */,
 				399D3B8A2BE156370018B935 /* App */,
@@ -206,6 +201,7 @@
 				399D3B8B2BE157A50018B935 /* CustomButton.swift */,
 				399D3B972BE167B10018B935 /* PostViewContoller.swift */,
 				399D3BDF2C77943B0018B935 /* RunLoopViewController.swift */,
+				3947822E2CB53A1900AB1D15 /* UIColorExtention.swift */,
 			);
 			path = Navigation5;
 			sourceTree = "<group>";
@@ -264,16 +260,6 @@
 				399D3BD92BEE0CA80018B935 /* ProfileHeaderView.swift */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		399D3C072C79E51D0018B935 /* Error */ = {
-			isa = PBXGroup;
-			children = (
-				399D3C052C79E5130018B935 /* ErrorViewController.swift */,
-				399D3C082C79E57A0018B935 /* ApiError.swift */,
-				399D3C0A2C79E5AD0018B935 /* NetworkService.swift */,
-			);
-			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,16 +391,14 @@
 				399D3B982BE167B10018B935 /* PostViewContoller.swift in Sources */,
 				399D3B922BE162700018B935 /* FeedViewController.swift in Sources */,
 				39133B662BBFD28C00B4D31D /* Photos.swift in Sources */,
+				3947822F2CB53A1900AB1D15 /* UIColorExtention.swift in Sources */,
 				399D3B792BDAB91E0018B935 /* Cheker.swift in Sources */,
 				39133AE42BB93E2500B4D31D /* ColorSetForButton.swift in Sources */,
 				39133B642BBF1C7100B4D31D /* PhotosViewController.swift in Sources */,
-				399D3C0B2C79E5AD0018B935 /* NetworkService.swift in Sources */,
 				399D3BDA2BEE0CA80018B935 /* ProfileHeaderView.swift in Sources */,
 				39133A612BB4050000B4D31D /* ViewController.swift in Sources */,
-				399D3C062C79E5130018B935 /* ErrorViewController.swift in Sources */,
 				39133A5D2BB4050000B4D31D /* AppDelegate.swift in Sources */,
 				399D3B7B2BDAB99F0018B935 /* LoginViewControllerDelegate.swift in Sources */,
-				399D3C092C79E57A0018B935 /* ApiError.swift in Sources */,
 				399D3BD82BEE0C5E0018B935 /* ProfileViewController.swift in Sources */,
 				39133B622BBF1B1B00B4D31D /* PhotosTableViewCell.swift in Sources */,
 				399D3B942BE1629D0018B935 /* FeedModel.swift in Sources */,

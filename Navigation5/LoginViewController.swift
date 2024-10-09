@@ -17,6 +17,8 @@ final class LoginViewController: UIViewController {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         return scrollView
     }()
+    var mycolor = UIColor.createColor(dark: .gray, any: .black)
+    
     
     var contentView: UIView = {
         let view = UIView()
@@ -103,7 +105,7 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
+        view.backgroundColor = mycolor
         navigationController?.navigationBar.isHidden = true
         
         setupViews()
@@ -124,6 +126,14 @@ final class LoginViewController: UIViewController {
         passwordField.delegate = self
         
         setupConstraints()
+    }
+    override var overrideUserInterfaceStyle: UIUserInterfaceStyle {
+        get {
+            .dark
+        }
+        set {
+            
+        }
     }
     private func displayErrorAlert(message: String) {
             let alert = UIAlertController(
