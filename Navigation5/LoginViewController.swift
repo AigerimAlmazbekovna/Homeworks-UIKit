@@ -105,7 +105,7 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = mycolor
+        view.backgroundColor = UIColor(named: "MyColor")
         navigationController?.navigationBar.isHidden = true
         
         setupViews()
@@ -127,14 +127,14 @@ final class LoginViewController: UIViewController {
         
         setupConstraints()
     }
-    override var overrideUserInterfaceStyle: UIUserInterfaceStyle {
-        get {
-            .dark
-        }
-        set {
+   // override var overrideUserInterfaceStyle: UIUserInterfaceStyle {
+     //   get {
+     //       .dark
+     //   }
+     //   set {
             
-        }
-    }
+     //   }
+  // }
     private func displayErrorAlert(message: String) {
             let alert = UIAlertController(
                 title: "Ошибка",

@@ -41,7 +41,8 @@ class PhotosViewController: UIViewController {
     
     override func viewDidLoad() {
             super.viewDidLoad()
-            view.backgroundColor = mycolor
+        view.backgroundColor = UIColor(named: "MyColor")
+        //view.backgroundColor = mycolor
             setupUI()
             setupConstraints()
             
