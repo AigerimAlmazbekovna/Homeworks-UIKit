@@ -19,8 +19,11 @@ final class FeedModedl {
         self.secretWord = secretWord
     }
     
-    func check(_ word: String) {
-        let isCorrect = word == secretWord
+   func check(_ word: String) {
+       let isCorrect = word == secretWord
         onCheckResult?(isCorrect)
-    }
+   }
+    
+
+    
 }

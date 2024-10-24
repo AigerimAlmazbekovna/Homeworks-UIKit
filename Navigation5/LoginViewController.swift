@@ -211,7 +211,7 @@ final class LoginViewController: UIViewController {
     }
 
    // @objc
-   private func touchLoginButton() {
+    func touchLoginButton() {
         guard let userLogin = loginField.text, !userLogin.isEmpty else {
               return displayErrorAlert(message: "Введите логин")
           }
@@ -226,7 +226,7 @@ final class LoginViewController: UIViewController {
           }
       }
 
-      private func navigateToProfile(user: User) {
+       func navigateToProfile(user: User) {
           let profileViewController = ProfileViewController(user: user)
           navigationController?.pushViewController(profileViewController, animated: true)
       }
